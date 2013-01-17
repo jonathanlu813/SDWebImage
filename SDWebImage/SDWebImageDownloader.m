@@ -8,6 +8,7 @@
 
 #import "SDWebImageDownloader.h"
 #import "SDWebImageDownloaderOperation.h"
+#import "SDWebImageKeychainWrapper.h"
 #import <ImageIO/ImageIO.h>
 
 NSString *const SDWebImageDownloadStartNotification = @"SDWebImageDownloadStartNotification";
@@ -100,7 +101,12 @@ static NSString *const kCompletedCallbackKey = @"completed";
     {
         // In order to prevent from potential duplicate caching (NSURLCache + SDImageCache) we disable the cache for image requests
         NSMutableURLRequest *request = [NSMutableURLRequest.alloc initWithURL:url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:15];
-        request.HTTPShouldHandleCookies = NO;
+        NSData *cookieData = [SDWebImageKeychainWrapper searchKeychainCopyMatching:@"cookie"];
+        NSString *cookie = [[NSString alloc] initWithData:cookieData encoding:NSUTF8StringEncoding];
+        
+        [request addValue:cookie forHTTPHeaderField:@"Cookie"];
+        
+        //request.HTTPShouldHandleCookies = NO;
         request.HTTPShouldUsePipelining = YES;
         [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
         operation = [SDWebImageDownloaderOperation.alloc initWithRequest:request queue:wself.workingQueue options:options progress:^(NSUInteger receivedSize, long long expectedSize)

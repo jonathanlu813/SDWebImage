@@ -22,6 +22,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		27951CDD16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 27951CDB16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h */; };
+		27951CDE16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 27951CDB16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h */; };
+		27951CDF16A7B3AA0068E212 /* SDWebImageKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27951CDC16A7B3AA0068E212 /* SDWebImageKeychainWrapper.m */; };
+		27951CE016A7B3AA0068E212 /* SDWebImageKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27951CDC16A7B3AA0068E212 /* SDWebImageKeychainWrapper.m */; };
+		27951CF216A7B5B20068E212 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27951CF116A7B5B20068E212 /* Security.framework */; };
+		27951CF416A7B5C00068E212 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27951CF116A7B5B20068E212 /* Security.framework */; };
 		530E49E816464C25002868E7 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 530E49E71646388E002868E7 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		530E49E916464C26002868E7 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 530E49E71646388E002868E7 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		530E49EA16464C7C002868E7 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 530E49E316460AE2002868E7 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,6 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27951CDB16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageKeychainWrapper.h; sourceTree = "<group>"; };
+		27951CDC16A7B3AA0068E212 /* SDWebImageKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageKeychainWrapper.m; sourceTree = "<group>"; };
+		27951CF116A7B5B20068E212 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		530E49E316460AE2002868E7 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		530E49E416460AE2002868E7 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		530E49E71646388E002868E7 /* SDWebImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
@@ -113,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27951CF416A7B5C00068E212 /* Security.framework in Frameworks */,
 				531041CD157EAFA400BBABC3 /* UIKit.framework in Frameworks */,
 				531041CE157EAFA400BBABC3 /* Foundation.framework in Frameworks */,
 				531041CF157EAFA400BBABC3 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27951CF216A7B5B20068E212 /* Security.framework in Frameworks */,
 				53761312155AD0D5005750A4 /* UIKit.framework in Frameworks */,
 				53761313155AD0D5005750A4 /* Foundation.framework in Frameworks */,
 				53761314155AD0D5005750A4 /* CoreGraphics.framework in Frameworks */,
@@ -154,6 +165,7 @@
 		53922D71148C55820056699D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27951CF116A7B5B20068E212 /* Security.framework */,
 				53FB893F14D35D1A0020B787 /* CoreGraphics.framework */,
 				53922D72148C55820056699D /* Foundation.framework */,
 				53FB894814D35E9E0020B787 /* UIKit.framework */,
@@ -211,6 +223,8 @@
 		53922DAC148C56DD0056699D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				27951CDB16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h */,
+				27951CDC16A7B3AA0068E212 /* SDWebImageKeychainWrapper.m */,
 				53922D8E148C56230056699D /* SDWebImageManager.h */,
 				53922D8F148C56230056699D /* SDWebImageManager.m */,
 				53922D89148C56230056699D /* SDWebImageDecoder.h */,
@@ -239,6 +253,7 @@
 				531041DC157EAFA400BBABC3 /* MKAnnotationView+WebCache.h in Headers */,
 				530E49E916464C26002868E7 /* SDWebImageOperation.h in Headers */,
 				530E49EB16464C7F002868E7 /* SDWebImageDownloaderOperation.h in Headers */,
+				27951CDE16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +271,7 @@
 				53761320155AD0D5005750A4 /* UIImageView+WebCache.h in Headers */,
 				530E49E816464C25002868E7 /* SDWebImageOperation.h in Headers */,
 				530E49EA16464C7C002868E7 /* SDWebImageDownloaderOperation.h in Headers */,
+				27951CDD16A7B3AA0068E212 /* SDWebImageKeychainWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +386,7 @@
 				531041CA157EAFA400BBABC3 /* UIImageView+WebCache.m in Sources */,
 				531041CB157EAFA400BBABC3 /* MKAnnotationView+WebCache.m in Sources */,
 				530E49ED16464C84002868E7 /* SDWebImageDownloaderOperation.m in Sources */,
+				27951CE016A7B3AA0068E212 /* SDWebImageKeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +403,7 @@
 				5376130F155AD0D5005750A4 /* UIImageView+WebCache.m in Sources */,
 				530E49EC16464C84002868E7 /* SDWebImageDownloaderOperation.m in Sources */,
 				53406750167780C40042B59E /* SDWebImageCompat.m in Sources */,
+				27951CDF16A7B3AA0068E212 /* SDWebImageKeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
